@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather</title>
+  <link rel="icon" href="./assets/images/weather-forecast-icon-18.jpg" />
+
+  <!-- Main meta tags -->
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="assets/css/all.min.css" />
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+  <!-- main Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+     <div class="d-flex flex-row">
+      <img src="./assets/images/logo.png" class="logo__image" />
+      <div class="d-flex flex-column ms-2">
+        <a class="navbar-brand text-white fs-6 fw-bold p-0" href="#">Weather</a>
+        <small class="text-white">tagline goes here</small>
+      </div>
+     </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse pt-2 my-1" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-lg-0">
+          <li class="nav-item mx-3">
+            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link active text-white" aria-current="page" href="#">News</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link active text-white" aria-current="page" href="#">Live cameras</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link active text-white" aria-current="page" href="#">Photos</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link active text-white" aria-current="page" href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Cards & find button -->
+  <section class="cards__button pb-5">
+    <div class="py-5 d-flex justify-content-center">
+      <input type="text" class="form-control w-75 py-2 rounded-pill border-0 text-white"
+        placeholder="Find your loaction ..." aria-label="Search">
+      <button class="btn bg-info text-white rounded-pill px-4 ms-1" type="button">Find</button>
+    </div>
+    <div class="row m-auto gy-4">
+      <div class="col-md-4">
+        <div class="card1 rounded-3 pb-4">
+          <div class="card__header1 rounded-top-3 d-flex flex-row justify-content-between align-items-center py-2">
+            <span class="text-secondary ms-2 today_Date"></span>
+            <span class="text-secondary me-2 today_Name"></span>
+          </div>
+          <div class="card-body text-white mt-2">
+            <span class="card-title ms-2 fs-3 fw-bold" id="city__name"></span>
+            <div class="d-flex flex-row align-items-center">
+              <h2 class="ms-2 my-2" id="temp_today"></h2>
+              <div class="ms-4">
+                <img id="iconToday" alt="weather icon for today" />
+              </div>
+            </div>
+            <p class="ms-2 text-info" id="condition__text"></p>
+            <i class="fa-solid fa-umbrella text-secondary"></i><span class="mx-1 text-secondary humidity me-3"></span>
+            <i class="fa-solid fa-wind text-secondary"></i><span class="mx-1 text-secondary wind me-3"></span>
+            <i class="fa-regular fa-compass text-secondary"></i> <span class="text-secondary direction "></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card2 rounded-3 pb-4">
+          <div class="card__header2 rounded-top-3 d-flex flex-row justify-content-between align-items-center py-2">
+            <span class="text-secondary ms-2 day1_Date "></span>
+            <span class="text-secondary me-2 day1_Name"></span>
+          </div>
+          <div class="card-body text-white mt-2 d-flex flex-column align-items-center">
+            <img id="iconDay1" class="text-center" alt="weather icon for tomorrow" />
+            <h4 id="tempMax__day1" class="ms-2 fs-2"></h4>
+            <h6 id="tempMin__day1" class="ms-2 fs-4 text-secondary"></h6>
+            <p class="ms-2 text-info" id="condition__text1"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card3 rounded-3 pb-4">
+          <div class="card__header3 rounded-top-3 d-flex flex-row justify-content-between align-items-center py-2">
+            <span class="text-secondary ms-2 day2_Date"></span>
+            <span class="text-secondary me-2 day2_Name"></span>
+          </div>
+          <div class="card-body text-white mt-2 d-flex flex-column align-items-center">
+            <img class="text-center" id="iconDay2" alt="weather icon for day after tomorrow" />
+            <h4 class="ms-2 fs-2" id="tempMax__day2"></h4>
+            <h6 class="ms-2 fs-4 text-secondary" id="tempMin__day2"></h6>
+            <p class="ms-2 text-info" id="condition__text2"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="m-auto pb-4 text-center">
+    <div class="py-5 d-flex justify-content-center">
+      <input class="form-control w-50 py-2 rounded-pill border-0 text-white"
+        placeholder="Enter your mail to subscribe ..." type="email">
+      <button class="btn bg-info text-white rounded-pill px-4 ms-1" type="button">Subscribe</button>
+    </div>
+    <p class="text-secondary">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+    <div class="social__icons">
+      <ul class="d-flex flex-row justify-content-center list-unstyled">
+        <a href="#" class="text-info">
+          <li class="mx-2"><i class="fa-brands fa-facebook"></i></li>
+        </a>
+        <a href="#" class="text-info">
+          <li class="mx-2"><i class="fa-brands fa-twitter"></i></li>
+        </a>
+        <a href="#" class="text-info">
+          <li class="mx-2"><i class="fa-brands fa-google"></i></li>
+        </a>
+        <a href="#" class="text-info">
+          <li class="mx-2"><i class="fa-brands fa-pinterest"></i></li>
+        </a>
+      </ul>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap Js -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Main js -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

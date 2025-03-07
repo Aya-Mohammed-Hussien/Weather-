@@ -1,0 +1,151 @@
+body {
+  font-family: "Roboto", serif;
+  background-color: #1e202b;
+}
+
+.form-control:focus {
+  background-color: #1e202b;
+  box-shadow: none;
+}
+
+
+/* NavBar */
+nav {
+  background-color: #1e202b;
+}
+
+.nav-item a{
+  transition: 0.7s all ease-out;
+}
+
+.nav-item a:hover {
+  color: #009AD8 !important ;
+  border-bottom:#009AD8 1px solid ; 
+}
+
+small {
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.logo__image {
+  cursor: pointer;
+}
+.navbar-toggler{
+  background-color: white ;
+  padding: 3px;
+}
+
+.navbar-toggler-icon{
+  width: 1em ;
+  height: 1em;
+}
+
+/* Cards__Section */
+section.cards__button {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/banner.png');
+  background-repeat: no-repeat;
+}
+
+section.cards__button input {
+  background-color: #1e202b;
+  font-size: 14px;
+}
+
+section.cards__button input::placeholder {
+  color: grey;
+}
+
+/* cards */
+.row {
+  width: 90%;
+}
+
+.card1,
+.card3 {
+  background-color: #323544;
+  height: 250px;
+}
+
+.card__header1,
+.card__header3 {
+  background-color: #2D303D;
+}
+
+.card2 {
+  background-color: #262936;
+  height: 250px;
+}
+
+.card__header2 {
+  background-color: #222530;
+}
+
+#temp_today , #iconToday {
+  font-size: 50px;
+}
+
+
+/* Footer */
+footer {
+  background-color: #262936;
+}
+
+footer input.form-control {
+  background-color: #1e202b;
+}
+
+footer input.form-control::placeholder {
+  color: grey;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+.social__icons i {
+  font-size: 20px;
+  border: 2px transparent solid;
+  border-radius: 50%;
+  padding: 8px;
+  background-color: #1e202b;
+  transition: 0.5s all;
+}
+
+.social__icons i:hover {
+  color: white;
+  background-color: #009AD8;
+}
+
+/* Contact page */
+section.contact1 div {
+  background-color: #262936 !important;
+}
+
+section.contact1 div a:hover {
+  border-bottom: 1px solid white;
+}
+
+/* Contact2 */
+form.contact__form {
+  width: 100%;
+}
+form.contact__form input{
+  color: white !important;
+}
+
+form.contact__form input.form-control,
+textarea {
+  background-color: #1e202b !important;
+  border: 1px solid gray;
+}
+
+form.contact__form input.form-control:focus,
+textarea {
+  border: 1px solid #009AD8;
+}
+
+
+form.contact__form input.form-control::placeholder {
+  color: grey;
+}
